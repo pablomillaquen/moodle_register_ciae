@@ -1,0 +1,51 @@
+<div class="container">
+    <div class= "row text-center">
+        <div class="col-12">
+            <img src="{{locallink}}img/autumn-leaf.png" style="max-width:100px;" />
+            <h5>Muchas gracias por completar esta información en su <b>{{name_ficha}}</b>.</h5>
+        </div>
+        <div class="col-12 mt-5">
+            <h5>Si lo desea, puede continuar a la <b>tercera parte del registro</b>.</h5>
+            <a href="{{locallink}}identity.php?id={{id}}"><img src="{{locallink}}img/autumn-leaf.png" style="max-width:100px;" /></a>
+        </div>
+        <div class="col-12 mt-5">
+            <h5>Le recordamos que el Registro posee 3 ETAPAS</h5>
+            <h5>Responder estas etapas es OPCIONAL y Ud. puede completarlas cuando</h5>
+            <h5>lo desee durante el proceso de realización de un curso o al final de un curso.</h5>
+        </div>
+    </div>
+    <div class="row mt-5 border border-primary">
+        <div class="col-2">
+            <p>Imagen</p>
+        </div>
+        <div class="col-6">
+            <p>REGISTRO</p>
+            <p class="mt-5">Ficha de antecedentes generales</p>
+            <p class="mt-5">Ficha de formación académica</p>
+            <p class="mt-5">Mi vida como formador</p>
+        </div>
+        <div class="col-4">
+            <p>Mis respuestas enviadas:</p>
+            <p> <small>{{percentage1}}%</small>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: {{percentage1}}%" aria-valuenow="{{percentage1}}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </p>
+            <p>  <small>{{percentage2}}%</small>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: {{percentage2}}%" aria-valuenow="{{percentage2}}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </p>
+            <p>  <small>{{percentage3}}%</small>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: {{percentage3}}%" aria-valuenow="{{percentage3}}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </p>
+        </div>    
+    </div>
+    <div class= "row text-center mt-5">
+        <div class="col-12">
+            <a href="{{homelink}}/my/" type="button" class="btn btn-success btn-lg">{{#str}} back, local_registerciae {{/str}}</a>
+        </div>
+    </div>
+</div>
