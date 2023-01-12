@@ -54,6 +54,9 @@
         $mform->addElement('hidden', 'id', 0);
         $mform->setType('id', PARAM_INT);
 
+        $mform->addElement('hidden', 'page', 0);
+        $mform->setType('page', PARAM_INT);
+
         $mform->addElement('selectyesno', 'esdocente', get_string('eseducador', 'local_registerciae'), $educador_arr);
 
         $buttonArray = array();

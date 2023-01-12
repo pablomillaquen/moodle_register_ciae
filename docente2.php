@@ -98,12 +98,16 @@ if($toform2->esdocente == 1 && $percentage3 < 100){
                 }
             }
         }
-        redirect("/local/repositoryciae/index.php");
+        if($fromform->page == 1){
+            redirect("/course/index.php?categoryid=10");
+        }else if ($fromform->page == 2){
+            redirect("/course/view.php?id=50&section=0");
+        }
     }else{
-        
         $sql = "SELECT u.id, (SELECT i.data from {user_info_data} as i where i.fieldid = 44 and i.userid = u.id) as esdocente from {user} as u join {user_info_data} as i on u.id=i.userid where u.id = ".$USER->id." limit 1";
         
         $toform = $DB->get_record_sql($sql);
+        $toform->page = $page;
         $mform->set_data($toform);
 
 
