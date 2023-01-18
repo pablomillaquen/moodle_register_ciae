@@ -99,7 +99,7 @@ if($toform2->esdocente == 1 && $percentage3 < 100){
             }
         }
         if($fromform->page == 1){
-            redirect("/course/index.php?categoryid=10");
+            redirect("/course/view.php?id=52");
         }else if ($fromform->page == 2){
             redirect("/course/view.php?id=50&section=0");
         }
@@ -120,7 +120,7 @@ if($toform2->esdocente == 1 && $percentage3 < 100){
     }
 }else if ($toform2->esdocente == 1 && $percentage3 == 100){
     if($page == 1){
-        redirect("/course/index.php?categoryid=10");
+        redirect("/course/view.php?id=52");
     }else if($page == 2){
         redirect("/course/view.php?id=50&section=0");
     }
