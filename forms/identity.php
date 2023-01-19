@@ -64,7 +64,8 @@
         $mform->addElement('hidden', 'repo', 0);
         $mform->setType('repo', PARAM_INT);
 
-        $mform->addElement('select', 'niveles', get_string('niveles', 'local_registerciae'), $niveles_arr);
+        $select = $mform->addElement('select', 'niveles', get_string('niveles', 'local_registerciae'), $niveles_arr);
+        $select->setMultiple(true);
 
         $mform->addElement('select', 'identidad_terr', get_string('identidad_terr', 'local_registerciae'), $identidad_arr);
 

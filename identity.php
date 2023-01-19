@@ -59,13 +59,13 @@ if($mform->is_cancelled()){
                 case "niveles":
                     $nivel_field = $DB->get_record('user_info_data', ['userid'=>$fromform->id, 'fieldid'=>$field->id]);
                     if($nivel_field){
-                        $nivel_field->data = $fromform->niveles;
+                        $nivel_field->data = implode(",", $fromform->niveles);
                         $DB->update_record('user_info_data', $nivel_field);
                     }else{
                         $newfield = new stdClass();
                         $newfield->userid = $fromform->id;
                         $newfield->fieldid = $field->id;
-                        $newfield->data = $fromform->niveles;
+                        $newfield->data = implode(",", $fromform->niveles);
                         $newfield->dataformat = 0;
                         $user_field = $DB->insert_record('user_info_data', $newfield, true, false);
                     }
